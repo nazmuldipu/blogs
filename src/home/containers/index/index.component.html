@@ -1,3 +1,29 @@
-<p>
-  index works!
-</p>
+<div class="container text-center">
+  <div class="head-box bg-unolo">
+    <h3>BLOG</h3>
+    Guides and expert knowledge on software development.
+    <div class="head-box-category">
+      Category : <a>Angular</a>&nbsp;&nbsp;<a>Java</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 p-2" *ngFor="let blog of blogList">
+      <div class="blog-box" (click)="onBlogBoxClick(blog.id)">
+        {{ blog.id }}
+        <div class="blog-box-author d-flex justify-content-between">
+          <div>{{ blog.author }}</div>
+          <div>{{ blog.date }}</div>
+        </div>
+        <div class="blog-box-name">
+          {{ blog.name }}
+        </div>
+        <div class="blog-box-initials">
+          {{ blog.initials }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ blogList | json }}

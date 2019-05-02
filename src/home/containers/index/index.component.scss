@@ -1,0 +1,77 @@
+:host {
+  background-color: #f1f2f5;
+  display: block;
+  min-height: 100vh;
+  padding-top: 15px;
+}
+.head-box {
+  border-radius: 15px;
+  padding: 30px 0 0 0;
+  color: white;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2) !important;
+  &-category {
+    background-color: #fff;
+    border-radius: 0px 0px 15px 15px;
+    margin-top: 15px;
+    padding: 10px;
+    color: blue;
+  }
+}
+
+.blog-box {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2) !important;
+  padding: 20px;
+  cursor: pointer;
+  &-author {
+    color: rgba(84, 94, 111, 0.6);
+    font-size: 14px;
+  }
+  &-name {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  &-initials {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 3;
+    // // font-size: 18px;
+    // font-weight: 300;
+    // height: 43px;
+    // margin: 0 auto;
+    // font-size: 16px;
+    // line-height: 1;
+    // -webkit-line-clamp: 3;
+    // -webkit-box-orient: vertical;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    &:before {
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    :after {
+      /* points in the end */
+      content: '';
+      /* absolute position */
+      position: absolute;
+      /* set position to right bottom corner of text */
+      right: 0;
+      width: 1em;
+      /* set width and height */
+      height: 1em;
+      margin-top: 0.2em;
+      background: white;
+    }
+  }
+}

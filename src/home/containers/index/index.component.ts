@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Blogs } from '../../../shared/jsons/blogs';
 
 @Component({
   selector: 'app-index',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+  blogList = Blogs;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onBlogBoxClick(id) {
+    console.log(id);
   }
-
 }
