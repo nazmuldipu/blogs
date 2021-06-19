@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-
+{#
 
 # My sample Eleventy website 1
 
@@ -10,15 +10,17 @@ layout: base
 - [{{ post.data.title }}]({{ post.url }})
 {% endfor %}
 
-<h1>{{name}}</h1>
-
-<div class="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-  <img class="object-cover w-full h-56"
-    src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-    alt="avatar">
-
-  <div class="py-5 text-center">
-    <a href="#" class="block text-2xl font-bold text-gray-800 dark:text-white">John Doe</a>
-    <span class="text-sm text-gray-700 dark:text-gray-200">Software Engineer</span>
+<h1>{{name}}</h1> #}
+<div class="container mx-auto py-3 min-h-screen">
+  <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3 mx-auto">
+    {% for course in courses %}
+    <a class="w-full bg-white rounded-lg shadow dark:bg-gray-800 cursor-pointer hover:shadow-lg" href="{{course.url}}">
+      <img class="object-contain w-full h-32 md:h-60 p-2" src="{{course.logo}}" alt="avatar">
+      <div class="py-2 text-center bg-green-50">
+        <div class="block text-2xl font-bold text-gray-800 dark:text-white">{{course.name}}</div>
+        <span class="text-sm text-gray-700 dark:text-gray-200">{{course.label}}</span>
+      </div>
+    </a>
+    {% endfor %}
   </div>
 </div>
