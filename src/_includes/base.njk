@@ -2,16 +2,17 @@
 title: My default title
 ---
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ title }}</title>
-  <link rel="stylesheet" href="/style.css"/>
-</head>
-<body>
-  <main>
-    {{ content | safe }}
-    <small>A website by {{ site.author }} - &copy; {{ site.copyrightYear }}</small>
-  </main>
-</body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="./assets/css/global.css"/>
+  </head>
+  <body>
+    <main>
+        {% include "_header.njk" %}   
+      {{ content | safe }}
+      <small>A website by {{ site.author }} - &copy; {{ site.copyrightYear }}</small>
+    </main>
+  </body>
 </html>
