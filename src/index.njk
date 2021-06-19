@@ -15,7 +15,7 @@ layout: base
   <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3 mx-auto">
     {% for course in courses %}
     <a class="w-full bg-white rounded-lg shadow dark:bg-gray-800 cursor-pointer hover:shadow-lg" href="{{course.url}}">
-      <img class="object-contain w-full h-32 md:h-60 p-2" src="{{course.logo}}" alt="avatar">
+      <img class="object-contain w-full h-32 md:h-60 p-2" width="100%" height="100%" src="{{course.logo}}" alt="avatar">
       <div class="py-2 text-center bg-green-50">
         <div class="block text-2xl font-bold text-gray-800 dark:text-white">{{course.name}}</div>
         <span class="text-sm text-gray-700 dark:text-gray-200">{{course.label}}</span>
