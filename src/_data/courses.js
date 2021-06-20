@@ -5,6 +5,12 @@ module.exports = [{
     "url": "/javascript"
 },
 {
+    "name": "Snippets",
+    "label": "Re-usable source code",
+    "logo": "https://ps.w.org/code-snippets/assets/icon.svg",
+    "url": "/snippets"
+},
+{
     "name": "Tailwind CSS",
     "label": "Build whatever you wantn",
     "logo": "https://cdn.worldvectorlogo.com/logos/tailwind-css-1.svg",

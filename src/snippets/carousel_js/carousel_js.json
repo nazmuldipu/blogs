@@ -1,0 +1,4 @@
+{
+  "defer_js": "../../assets/scripts/carousel_js.js",
+  "sync_css": "../../assets/css/carousel_js.css"
+}

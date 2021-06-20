@@ -1,5 +1,7 @@
 module.exports = function (config) {
-  config.addPassthroughCopy({ "./src/_includes/style.css": "style.css" });
+  config.addPassthroughCopy({ "./src/assets/scripts": "assets/scripts" });
+  config.addPassthroughCopy({ "./src/assets/css": "assets/css" });
+  config.addPassthroughCopy({ "./src/assets/images": "assets/images" });
 
   return {
     dir: {
